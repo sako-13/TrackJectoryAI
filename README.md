@@ -124,17 +124,6 @@ and receives 1–5-season forecasts from all three models (median + 10–90%
 band), plus their development archetype. It loads the artifacts produced by
 the pipeline (`artifacts/model_bundle.pkl`), so run the pipeline first.
 
-## Timeline → repository map
-
-| Milestone | Where |
-|---|---|
-| Sep 23 — pull, cache, clean data | `src/data/ingest.py`, `src/data/clean.py`, `data/raw/` |
-| Sep 26 — features + baseline | `src/data/features.py`, `src/models/age_curve.py`, `src/models/gbm.py` |
-| Sep 28 — sequence model + comparison | `src/models/sequence.py`, `src/viz.py` (comparison figures) |
-| Oct 1 — held-out evaluation + calibration | `src/evaluation/`, `reports/analysis.md` §1–2 |
-| Oct 2 — clustering & archetypes | `src/clustering/archetypes.py`, `reports/analysis.md` §3 |
-| Oct 4 — visuals, write-up, polished repo | `reports/figures/`, `README.md`, this repo |
-
 ## Limitations
 
 - **Data provenance** — see *Data*: reported numbers reflect the simulated
