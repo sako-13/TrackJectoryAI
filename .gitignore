@@ -12,6 +12,8 @@ data/raw/*
 data/processed/*
 !data/sample/
 artifacts/*
+# keep the trained model bundle so the demo works out of the box
+!artifacts/model_bundle.pkl
 
 # Keep small committed sample data
 !data/sample/**

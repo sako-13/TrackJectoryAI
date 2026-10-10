@@ -16,4 +16,5 @@ demo:
 	python3 scripts/serve_demo.py
 
 clean:
-	rm -rf artifacts/* data/raw/* data/processed/* reports/figures/*
+	rm -rf data/raw/* data/processed/* reports/figures/*
+	rm -f artifacts/model_bundle.pkl
