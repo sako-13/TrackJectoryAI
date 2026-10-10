@@ -1,0 +1,1 @@
+"""Demo web app subpackage."""

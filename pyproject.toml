@@ -1,0 +1,10 @@
+[project]
+name = "athlete-career-forecast"
+version = "0.1.0"
+description = "Probabilistic forecasting of track athlete career trajectories (World Athletics data)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

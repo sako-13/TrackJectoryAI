@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Generated at runtime (regenerate with `make pipeline`)
+data/raw/*
+data/processed/*
+!data/sample/
+artifacts/*
+
+# Keep small committed sample data
+!data/sample/**

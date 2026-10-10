@@ -1,0 +1,39 @@
+event: "100m"          # event to model: "100m" or "800m"
+seed: 42
+
+data:
+  source: "auto"               # auto | api | synthetic
+  n_synthetic_athletes: 2400   # used when the World Athletics API is unreachable
+  cache_dir: "data/raw"
+  processed_dir: "data/processed"
+  min_seasons: 4               # minimum career length (seasons) to keep an athlete
+
+features:
+  history_len: 10              # seasons of context fed to the sequence model
+  horizons: 5                  # number of future seasons to forecast
+  min_history: 3               # minimum history before a forecast is issued
+
+split:                          # athlete-level (grouped) split
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+model:
+  kind: "lstm"                 # lstm | transformer
+  epochs: 40
+  batch_size: 128
+  lr: 0.002
+  hidden: 64
+  num_layers: 1
+  nhead: 4
+  ff_dim: 128
+  dropout: 0.1
+  quantiles: [0.1, 0.5, 0.9]
+  early_stop_patience: 8
+
+clustering:
+  k: 4
+
+demo:
+  host: "127.0.0.1"
+  port: 8000
