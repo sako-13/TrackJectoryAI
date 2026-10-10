@@ -1,4 +1,4 @@
-# 🏃 Athlete Career Forecaster
+# Athlete Career Forecaster
 
 Probabilistic forecasting of track-athlete career development. Trains an
 LSTM/Transformer sequence model on season-by-season results for thousands of
